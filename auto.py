@@ -7,8 +7,9 @@ import sys
 # automation
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
 import time
+# keydown
+import pyautogui
 
 driver = webdriver.Chrome('C:/Users/p.kontos/Downloads/chromedriver.exe')
         
@@ -25,17 +26,31 @@ driver.find_element_by_id("search-icon-legacy").click()
 
 time.sleep(1)
 driver.find_element_by_xpath('//*[@id="video-title"]/yt-formatted-string').click()
-
+driver.maximize_window()
 time.sleep(8)
 try:
     driver.find_element_by_xpath('//*[@id="skip-button:5"]/span/button').click()
 except:
     print('no ads')
     
-driver.maximize_window()
 time.sleep(1)
-
 # send keys f in the future
+# perform the operation
+pyautogui.keyDown('f')
+pyautogui.keyUp('f')
+
+
+# -------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 # Scrapping
