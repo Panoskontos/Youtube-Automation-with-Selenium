@@ -19,11 +19,15 @@ driver.find_element_by_xpath('//*[@id="content"]/div[2]/div[5]/div[2]/ytd-button
 
 time.sleep(1)
 
-driver.find_element_by_name("search_query").send_keys("Ekpe")
+driver.find_element_by_name("search_query").send_keys("Blues")
 driver.find_element_by_id("search-icon-legacy").click()
 
 time.sleep(1)
 driver.find_element_by_xpath('//*[@id="video-title"]/yt-formatted-string').click()
+
+time.sleep(8)
+driver.find_element_by_xpath('//*[@id="skip-button:5"]/span/button').click()
+
 
 # Scrapping
 # extract hacker news and jobs 
@@ -51,4 +55,3 @@ def scrappe_jobs():
     print(str)
     
 
-play_xanomai()
